@@ -1,0 +1,154 @@
+
+
+/*
+
+.header {
+    display: flex;
+    max-width: 98%;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+h1 {
+    margin-right: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #6f5bb3;
+    color: white;
+    margin: 5px;
+}
+
+#Layer_1,
+.st0,
+img {
+    width: 25px;
+    height: 25px;
+}
+img,
+h3,
+#Layer_1 {
+    margin: 10px;
+}
+
+
+
+*/
+/* ====================================
+    BASIC
+=====================================*/
+
+img {
+    width: 200px;
+    height: 250px;
+}
+
+/* div, nav, h1, h2, h3, p, section, header, main  {
+    border: 1px red solid;
+    margin: 5px;
+} */
+
+main > div, 
+section {
+    border: 1px red solid;
+    margin: 5px;
+}
+
+.grid-container 
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "header"
+                          "navigation"
+                          "main";
+}
+
+.header {
+    grid-area: header;
+    background-color: #ddebc7;
+
+}
+
+.navigation {
+    grid-area: navigation;
+    background-color: #abd6cf;
+   
+}
+.main {
+    grid-area: main;
+    background-color:#bcabd6;
+}
+
+@media (min-width: 768px ) 
+{
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: "header header"
+                             "navigation main";
+    }
+}
+
+
+/* ====================================
+    Main Elements
+=====================================*/
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
+}
+
+.main {
+    display: grid;
+}
+
+@media (min-width: 768px)
+{
+    .main {
+        grid-template-columns: 50%;
+        border: 1px solid red;
+    }
+    .traffic, .social-container {
+        grid-column: 1 / span 2;
+    }
+    .Daily, .memebers, .message {
+        grid-column: 1 / span 1;
+    }
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+
+
+    .widget-container-full {
+        width: 90vw;
+    }
+    .widget-container-half {
+        width: 45vw;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+/* ====================================
+    Btoth Main and Navigation
+=====================================*/
+
+/*
+Navigation
+*/
+
+
+
+/*
+Main
+*/
+

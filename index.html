@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> WebApp DashBoard</title>
+        <link rel = "stylesheet" href = "normalizer.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class = "grid-container">
+            <header class = "header">
+                <h1>YourApp</h1>
+                <div>
+                        <svg version="1.1" id = "Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                            <g class = "bell_icon">
+                                <style type="text/css">
+                                    .st0{fill: blue;}
+                                </style>
+                                <g id="_x36__6_">
+                                    <g>
+                                        <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                                            c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                                    </g>
+                                </g>
+                             </g>
+                        </svg>
+                </div>
+                <img src = "images/member-4.jpg">
+
+                <h3> Abdi Shafi</h3>
+               
+            </header>
+
+            <!--======================== 
+                Navigation
+            ===========================-->
+            <nav class = "navigation">
+                    <h2> Nav </h2>
+                    <a> 
+                    
+                    </a>
+            </nav>
+    
+            <!--======================== 
+                Main Components 
+            ===========================-->
+            <main class = "main">
+                
+                <!--
+                    Dashboard Header
+                -->
+                <div class = "main-header"> 
+                    <h2 class = "headline"> DashBoard </h2>
+
+                    <div class = "main-header-search">
+                        <input type ="search" placeholder = "search..."/>
+                    </div>
+                </div>
+
+
+                <!--
+                    Alert Bar 
+                -->
+                <div class = "alert" id = "alert">
+                        ​<!-- JS will insert alert here -->
+                </div>
+                
+
+
+                <!--
+                    Traffic Section: Line graphs
+                -->
+                <section class ="traffic">
+                    <div class = "traffic-header">
+                        <h3>Traffic </h3>
+                        <ul class = "traffic-nav">
+                            <li class = "traffic-nav-link">Hourly </li>
+                            <li class = "traffic-nav-link">Daily </li>
+                            <li class = "traffic-nav-link active">Weekly </li>
+                            <li class = "traffic-nav-link">Monthly </li>
+                        </ul>
+                    </div>
+
+                    <div class = "widget-container-full">
+                        <!-- Element line graph will attrach to -->
+                        <img src = "gabadh.jpg" > </img>
+                        <canvas id = "trafic-chart"> </canvas>
+                    </div>
+                </section>
+
+
+                <!--
+                    Traffic Section: Bar and Doughnut Charts
+                -->
+
+                <section class = "Daily">
+                    <h3> Daily Traffic </h3>
+                    <div class ="widget-container-half">
+                        <!-- Element bar graph will attach to -->
+                        <img src = "gabadh.jpg" > </img>
+                        <canvas id = "daily-chart">
+
+                        </canvas>
+                    </div>
+                </section>
+
+
+                <!--
+                    Social Status
+                -->
+                <section>
+                    <div class ="social-container">
+                        <div class = "social-image">
+                            <!-- inline SVG not included for brevit-->
+                            <img src = "gabadh.jpg" > </img>
+                        </div>
+
+                        <div class = "social-text">
+                            <p> Twitter </p>
+                            <p>10,345 </p>
+                        </div>
+                    </div>
+
+                    <div class ="social-container">
+                        <div class = "social-image">
+                            <!-- inline SVG not included for brevit-->
+                            <img src = "gabadh.jpg" > </img>
+                        </div>
+
+                        <div class = "social-text">
+                            <p> Facebook </p>
+                            <p>8,739 </p>
+                        </div>
+                    </div>
+
+                    <div class ="social-container">
+                            <div class = "social-image">
+                                <!-- inline SVG not included for brevit-->
+                                <img src = "gabadh.jpg" > </img>
+                            </div>
+
+                            <div class = "social-text">
+                                <p> Gooble+ </p>
+                                <p>2,530 </p>
+                            </div>
+                    </div>
+                </section>
+                
+                <!-- 
+                    New Members and Recent Activity
+                -->
+
+                <section class = "memebers">
+
+                    <h3> New memebers </h3>
+                    <div class = "memebers-container">
+                        <img src = "gabadh.jpg" > </img>" class = "profile-image">
+                        <div class = "memebers-text"> 
+                            <p> Vitoria Chambers </p>
+                            <a href = "#"> Victoria.chambers80@example.com </a>
+                        </div>
+                        <p>10/15/15 </p>
+                    </div>
+                </section>
+
+                <section class = "memebers">
+
+                        <h3> Recent Activity </h3>
+                        <div class = "memebers-container">
+                            <img src = "gabadh.jpg"  class = "profile-image">
+                            <div class = "memebers-text"> 
+                                <p> Vitoria Chambers </p>
+                                <a href = "#"> Victoria.chambers80@example.com </a>
+                            </div>
+                            <p>10/15/15 </p>
+                        </div>
+                </section>
+
+                    <!-- 
+                    New Members and Recent Activity
+                -->
+
+                <section class = "message">
+                    <h3> Message User </h3>
+                    <form class = "widget-container">
+                        <input type = "text" placeholder= "Search for User" class = "form-field" id = "userField">
+                        <textarea placeholder=" Message for User" class = "form-area" id = "messageField"></textarea>
+                        <button class = "button-primary" id = "send"> Send </button>
+                    </form>
+                </section>
+
+
+                    <!-- 
+                    Settings
+                -->
+                
+                <!--Local settings widget -->
+                <section class = "setttings">
+                    <h3> Settings </h3>
+                    <!-- custom CSS toggle code -->
+                    <!-- Custom css toggle code -->
+                    <img src = "gabadh.jpg"> </img>
+
+
+                    <section class = "form-field" id = "timezone">
+                        <option disabled selected> Select a Timezone </option>
+                        <option> Eastern </option>
+                        <option> Central </option>
+                        <optin> Greenwich </optin>
+                        <option> Hawaii</option>
+                        <option> Mountain </option>
+                    </section>
+
+                    <div class = "setting-button">
+                        <button class = "button-primary" id = "save"> Save </button>
+                        <button class = "button-disabled" id = "cancel"> Cancel </button>
+                    </div>
+                </section>   
+            </main>
+    </body>
+</html>
