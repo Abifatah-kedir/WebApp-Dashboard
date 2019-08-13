@@ -1,41 +1,4 @@
 
-
-/*
-
-.header {
-    display: flex;
-    max-width: 98%;
-    border: 1px solid red;
-    margin: 0 auto;
-}
-h1 {
-    margin-right: auto;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #6f5bb3;
-    color: white;
-    margin: 5px;
-}
-
-#Layer_1,
-.st0,
-img {
-    width: 25px;
-    height: 25px;
-}
-img,
-h3,
-#Layer_1 {
-    margin: 10px;
-}
-
-
-
-*/
 /* ====================================
     BASIC
 =====================================*/
@@ -46,15 +9,18 @@ img {
 }
 
 /* div, nav, h1, h2, h3, p, section, header, main  {
+    dislay: flex;
     border: 1px red solid;
     margin: 5px;
 } */
 
-main > div, 
+ 
+.main,
 section {
     border: 1px red solid;
     margin: 5px;
 }
+
 
 .grid-container 
 {
@@ -64,22 +30,67 @@ section {
     grid-template-areas: "header"
                           "navigation"
                           "main";
+    font-family: "Times New Roman", Times, serif;
+}
+/* ====================================
+    Header
+=====================================*/
+
+.header > div {
+    border-right: 2px solid black;
+    padding-right: 10px;
+}
+
+.header > div,
+.header > img, 
+#Layer_1
+{
+    width: 40px;
+    height: 30px;
+   
+
+    margin-right: 5px;
 }
 
 .header {
     grid-area: header;
-    background-color: #ddebc7;
-
+    background-color: #6f5bb3;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+.header > h1 {
+    margin-right: auto;
+}
+h1 > span {
+    font-weight: lighter;
+    font-family:  Courier, monospace;
+    
 }
 
+
+
+.header > h3,
+.header > img 
+{
+    margin-right: 10px;
+}
+
+ img {
+    border-radius: 50%;
+}
+/* ====================================
+    Navigatioon
+=====================================*/
 .navigation {
     grid-area: navigation;
-    background-color: #abd6cf;
+    background-color: #342649;
    
 }
 .main {
     grid-area: main;
-    background-color:#bcabd6;
+    
 }
 
 @media (min-width: 768px ) 
@@ -93,10 +104,92 @@ section {
 
 
 /* ====================================
-    Main Elements
+    Main 
 =====================================*/
+/*
+    Dashboard Header
+*/
+
+.headline,
+.main-header-search 
+{
+    flex-grow: 0.5;
+}
+.headline 
+{
+    margin-right: auto;
+    padding: 5px 0px;
+}
+.main-header-search
+{
+    flex-grow: 3;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    background:lightgrey;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+div.main-header
+{
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    margin-top: 0px;
+}
+
+ .main-header-search input 
+ {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+
+
+/*
+    alert banner
+*/
+
+.alert {
+    background-color: #6f5bb3;
+    color: white;
+}
+.alert-banner {
+    display: flex;
+    
+}
+.alert-banner > p {
+    margin-right: auto;
+    margin-left: 8px;
+}
+p.alert-banner-close {
+    margin-right: 4px;
+}
+
+/*
+ Traffic Section: Line graphs
+*/
+.traffic-header {
+    display: flex;
+    border: 1px red solid;
+}
+.traffic-nav-link {
+    display: inline-block;
+    text-decoration: none;
+}
+h3 {
+    margin-right: auto;
+}
+li {
+    margin-left: 8px;
+}
+
 .widget-container-full,
 .widget-container-half {
+    border: 1px solid red;
     width: 95vw;
 }
 
@@ -106,6 +199,7 @@ section {
 
 @media (min-width: 768px)
 {
+
     .main {
         grid-template-columns: 50%;
         border: 1px solid red;
@@ -132,23 +226,18 @@ section {
 }
 
 
-
-
-
-
-
-
-/* ====================================
-    Btoth Main and Navigation
-=====================================*/
-
 /*
-Navigation
+    Social Status
 */
+ .social-container {
+    border: 1px solid blue;
+    margin: 5px;
+    float: left;    
+}
 
 
 
 /*
-Main
+
 */
 
