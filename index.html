@@ -2,8 +2,11 @@
 <html>
     <head>
         <title> WebApp DashBoard</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href = "normalizer.css">
         <link rel="stylesheet" href="style.css">
+        
         
     </head>
 
@@ -47,7 +50,14 @@
             ===========================-->
             <main class = "main">
                 
-                <!--
+
+            <!--=====
+                Column 1
+            ====== -->
+
+
+                <!-- 
+                    
                     Dashboard Header
                 -->
                 <div class = "main-header"> 
@@ -57,14 +67,17 @@
                         <input type ="search" placeholder = "search..."/>
                     </div>
                 </div>
-
-
                 <!--
                     Alert Bar 
                 -->
+            
                 <div class = "alert" id = "alert">
-                        ​<!-- JS will insert alert here -->
+                        <!-- JS will insert alert here  --> 
                 </div>
+                
+             <!--=====
+                Column 2
+            ====== -->
 
                 <!--
                     Traffic Section: Line graphs
@@ -85,11 +98,14 @@
                         
                         <canvas id = "trafic-chart">
                             
-                         </canvas>
+                        </canvas>
                     </div>
                 </section>
 
 
+            <!--=====
+                Column 3
+            ====== -->
                 <!--
                     Traffic Section: Bar and Doughnut Charts
                 -->
@@ -104,7 +120,7 @@
                     </div>
                 </section>
 
-                <section class = "Daily">
+                <section class = "mobile">
                     <h3> Mobile_Users </h3>
                     <div class ="widget-container-half">
                         <!-- Element bar graph will attach to -->
@@ -114,10 +130,16 @@
                     </div>
                 </section>
 
+
+             <!--=====
+                Column 4
+            ====== -->   
                 <!--
                     Social Status
                 -->
-                
+                <h3> Social Stats </h3>
+                <section class = "social"> 
+                    
                     <div class ="social-container">
                         <div class = "social-image">
                             <!-- inline SVG not included for brevit-->
@@ -181,19 +203,25 @@
                                         h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
                                     </svg>
                             </div>
+                        
 
                             <div class = "social-text">
                                 <p> Gooble+ </p>
                                 <p>2,530 </p>
                             </div>
                     </div>
+                </section>
               
-                
+
+
+             <!--=====
+                Column 5
+            ====== -->
                 <!-- 
                     New Members and Recent Activity
                 -->
 
-                <section class = "memebers">
+                <section class = "members">
 
                     <h3> New memebers </h3>
                     <div class = "memebers-container">
@@ -206,7 +234,7 @@
                     </div>
                 </section>
 
-                <section class = "memebers">
+                <section class = "members">
 
                         <h3> Recent Activity </h3>
                         <div class = "memebers-container">
@@ -233,7 +261,13 @@
                 </section>
 
 
-                    <!-- 
+
+            
+             <!--=====
+                Column 6
+            ====== -->
+
+                 <!-- 
                     Settings
                 -->
                 
@@ -244,14 +278,15 @@
                     <!-- Custom css toggle code -->
 
 
-                    <section class = "form-field" id = "timezone">
-                        <option disabled selected> Select a Timezone </option>
-                        <option> Eastern </option>
-                        <option> Central </option>
-                        <optin> Greenwich </optin>
-                        <option> Hawaii</option>
-                        <option> Mountain </option>
-                    </section>
+                    <select class = "form-field" id = "timezone">
+                        <option value = " Select a Timezone" disabled selected>Select a Timezone</option>
+                        <option value = "Eastern"> Eastern </option>
+
+                        <option value = "Centeral"> Central </option>
+                        <optin value = "Greenwich"> Greenwich </optin>
+                        <option value = "Hawaii"> Hawaii</option>
+                        <option value = "Mountain"> Mountain </option>
+                    </select>
 
                     <div class = "setting-button">
                         <button class = "button-primary" id = "save"> Save </button>
@@ -259,6 +294,7 @@
                     </div>
                 </section>   
             </main>
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"> </script>
             <script src = "jsFile.js"> </script>
     </body>
 </html>

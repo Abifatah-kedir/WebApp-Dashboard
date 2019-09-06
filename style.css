@@ -2,26 +2,6 @@
 /* ====================================
     BASIC
 =====================================*/
-
-img {
-    width: 200px;
-    height: 250px;
-}
-
-/* div, nav, h1, h2, h3, p, section, header, main  {
-    dislay: flex;
-    border: 1px red solid;
-    margin: 5px;
-} */
-
- 
-.main,
-section {
-    border: 1px red solid;
-    margin: 5px;
-}
-
-
 .grid-container 
 {
     display: grid;
@@ -50,7 +30,7 @@ section {
    
 
     margin-right: 5px;
-}
+} 
 
 .header {
     grid-area: header;
@@ -68,7 +48,6 @@ h1 > span {
     font-family:  Courier, monospace;
     
 }
-
 
 
 .header > h3,
@@ -106,19 +85,26 @@ h1 > span {
 /* ====================================
     Main 
 =====================================*/
+
+.main {
+    display: grid;
+}
+
 /*
     Dashboard Header
 */
 
-.headline,
-.main-header-search 
+.main-header
 {
-    flex-grow: 0.5;
+    display: flex;
+    border: 1px red solid;
+    align-items: center;
+    margin-top: 0px;
 }
 .headline 
 {
-    margin-right: auto;
     padding: 5px 0px;
+    flex-grow: 0.5;
 }
 .main-header-search
 {
@@ -130,13 +116,7 @@ h1 > span {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-div.main-header
-{
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    margin-top: 0px;
-}
+
 
  .main-header-search input 
  {
@@ -146,8 +126,6 @@ div.main-header
     padding: 5px;
     border-radius: 5%;
 }
-
-
 
 /*
     alert banner
@@ -174,7 +152,7 @@ p.alert-banner-close {
 */
 .traffic-header {
     display: flex;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 .traffic-nav-link {
     display: inline-block;
@@ -187,21 +165,36 @@ li {
     margin-left: 8px;
 }
 
-.widget-container-full,
-.widget-container-half {
-    border: 1px solid red;
-    width: 95vw;
+section > canvas {
+    width: 100%;
 }
 
-.main {
-    display: grid;
+.Daily, 
+.mobile,
+.traffic,
+.social,
+.members,
+.message,
+.setttings {
+    width: 100%;
+    border: 1px red solid;
+    margin-top: 6px;
 }
+
+.widget-container-full,
+.widget-container-half {
+    /* border: 1px solid red; */
+    width: 98vw;
+    /* width: 95vw; */
+    margin: 5px 0px;
+}
+
 
 @media (min-width: 768px)
 {
 
-    .main {
-        grid-template-columns: 50%;
+    .main  {
+        /* grid-template-columns: 100%; */
         border: 1px solid red;
     }
     .traffic, .social-container {
@@ -229,15 +222,108 @@ li {
 /*
     Social Status
 */
- .social-container {
-    border: 1px solid blue;
-    margin: 5px;
-    float: left;    
+.social-container {
+    display: flex;
+    width: 32%;
+    /* border: 1px solid blue; */
+    margin-right: 4px;
+}
+.social {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-/*
 
+/*
+  members
 */
 
+/* .members {
+    width: 100%;
+    display: block;
+    border: 1px solid blue;
+} */
+
+
+
+
+/*
+  members
+*/
+
+
+
+
+/*
+    Messaging User
+*/
+
+.widget-container {
+    border: 1px solid red;
+    width: 95%;
+    padding: 10px;
+}
+ 
+input[type=text],
+textarea,
+#timezone {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  textarea {
+      height: 120px;
+  }
+  #send {
+    width: 100%;
+    
+    
+  }
+  #send,
+  .button-disabled,
+  .button-primary {
+    /* margin-left: 10px; */
+    /* margin: 10px; */
+    background-color: #6f5bb3;
+    color: white;
+    padding: 10px 15px;
+    /* margin: 8px 0; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+/*
+    Settings
+*/
+
+.setttings {
+    border: 1px red solid;
+}
+ 
+.form-field,
+.setting-button {
+    width: 100%;
+
+    border: 1px red solid;
+    float: center;
+}
+
+.button-primary,
+.button-disabled {
+    width: 49.5%;
+    margin: 0 auto;
+   
+  
+}

@@ -1,16 +1,16 @@
 
 /*
     js for Alert Banner
-*/
 
-const alert = 
-    `
-        <div class="alert-banner">
-            <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
-            to complete</p><p class="alert-banner-close">X</p>
-        </div>
-    `;
-document.getElementById("alert").innerHTML = alert;
+*/
+// const alert = 
+//     `
+//         <div class="alert-banner">
+//             <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
+//             to complete</p><p class="alert-banner-close">X</p>
+//         </div>
+//     `;
+// document.getElementById("alert").innerHTML = alert;
 
 // alert.addEventListener('click',(e) =>
 // {
@@ -20,9 +20,6 @@ document.getElementById("alert").innerHTML = alert;
 //         alert.style.display = "none";
 //     }
 // });
-
-
-
 
 
 /* ===============================================
@@ -35,7 +32,7 @@ document.getElementById("alert").innerHTML = alert;
     js Traffic Section: Line graphs
 */
 
-const trafficCanvas = document.getElementById("daily-chart");
+const trafficCanvas = document.getElementById("trafic-chart");
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -67,8 +64,8 @@ let trafficOptions = {
 
 let trafficChart =  new Chart(trafficCanvas, {
     type: 'line',
-    data: dailyData,
-    options: dailyOptions
+    data: trafficData,
+    options: trafficOptions
 });
 
 /*
