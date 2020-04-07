@@ -3,23 +3,29 @@
     js for Alert Banner
 
 */
-// const alert = 
-//     `
-//         <div class="alert-banner">
-//             <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
-//             to complete</p><p class="alert-banner-close">X</p>
-//         </div>
-//     `;
-// document.getElementById("alert").innerHTML = alert;
 
-// alert.addEventListener('click',(e) =>
-// {
-//     const element = e.target;
-//     if (element.classList.contains("alert-banner-close")) 
-//     {
-//         alert.style.display = "none";
-//     }
-// });
+
+
+
+const alert = document.getElementById("alert");
+
+alert.innerHTML =
+        `
+            <div class="alert-banner">
+                <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+                
+                <p class="alert-banner-close">x</p>
+            </div>
+        `;
+
+alert.addEventListener('click', e => {
+    const element = e.target;
+
+    if(element.classList.contains("alert-banner-close")) {
+        alert.style.display = "none"
+    }
+});
+
 
 
 /* ===============================================
@@ -68,13 +74,16 @@ let trafficChart =  new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+
+
 /*
     js Traffic Section: Bar Graph
 */
 
 const dailyCanvas = document.getElementById("daily-chart");
 
-// data for daily traffic bar chart
+// // data for daily traffic bar chart
+
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S" ],
     datasets: [{
@@ -103,6 +112,9 @@ let dailyChart = new Chart(dailyCanvas, {
     data: dailyData,
     options: dailyOptions
 });
+
+
+
 
 /*
     js Traffic Section: Doughnut Chart
@@ -149,20 +161,22 @@ let mobileChart = new Chart(mobileCanvas, {
 ==================================================*/
 
 const user = document.getElementById("userField");
-const message = document.getElementById("messageFiled");
-const send = document.getElementById("send");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send")
 
 
 send.addEventListener('click', () => {
-    // ensure user and message fields are filled out
-    if(user.value === "" && message.value === "")
-    {
-        alert("Please fill out user and message fields before sending");
-    } else if (user.value === " " ) {
-        alert("Please fill out user field before sending");
-    } else if(user.value === "") {
-        alert("Please fill out message field before sending");
-    }else {
-        alert( `Message successfully send to: ${user.value}`);
+   // ensure user and message fields are filled out
+if (user.value === "" && message.value === "") {
+    alert("Please fill out user and message fields before sending");
+    } else if (user.value === "" ) {
+    alert("lease fill out user field before sending");
+    } else if (message.value === "" ) {
+    alert("Please fill out message field before sending");
+    } else {
+    alert(`Message successfully sent to: ${user.value}`);
     }
-})
+});
+
+
+
