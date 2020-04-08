@@ -7,9 +7,9 @@
 
 
 
-const alert = document.getElementById("alert");
+const alertMessage = document.getElementById("alert");
 
-alert.innerHTML =
+alertMessage.innerHTML =
         `
             <div class="alert-banner">
                 <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
@@ -18,11 +18,11 @@ alert.innerHTML =
             </div>
         `;
 
-alert.addEventListener('click', e => {
+        alertMessage.addEventListener('click', e => {
     const element = e.target;
 
     if(element.classList.contains("alert-banner-close")) {
-        alert.style.display = "none"
+        alertMessage.style.display = "none"
     }
 });
 
@@ -52,7 +52,8 @@ let trafficData = {
 };
 
 let trafficOptions = {
-    aspectRatio: 2.5,
+    // aspectRatio: 2.5,
+    responsive: true,
     animation: {
         duration: 0
     },
@@ -95,6 +96,7 @@ const dailyData = {
 };
 
 const dailyOptions = {
+     responsive: true,
     scales: {
         yAxes: [{
             ticks: {
@@ -137,6 +139,7 @@ const mobileData = {
 };
 
 const mobileOptions = {
+    responsive: true,
        legend: {
             position: 'right',
             labels: {
@@ -150,7 +153,7 @@ let mobileChart = new Chart(mobileCanvas, {
         type: 'doughnut',
         data: mobileData,
         options: mobileOptions
-    });
+});
 
 
 
