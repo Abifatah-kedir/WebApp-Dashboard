@@ -59,7 +59,7 @@ media queries
     Mobile
 */
 
-@media (min-width: 768px ) 
+@media (min-width: 768px ), (min-width: 1024px) 
 {
     .navigation {
         justify-content: column;
